@@ -1,15 +1,19 @@
+#
+# Conditional build:
+# _without_tests - do not perform "make test"
+#
 %include	/usr/lib/rpm/macros.perl
 %define	pdir	Class
 %define	pnam	Date
 Summary:	Class for easy date and time manipulation
 Summary(pl):	Klasa Perla do ³atwej manipulacji dat± i czasem
 Name:		perl-%{pdir}-%{pnam}
-Version:	1.1.5
-Release:	3
+Version:	1.1.6
+Release:	2
 License:	GPL/Artistic
 Group:		Development/Languages/Perl
 Source0:	http://www.cpan.org/modules/by-module/%{pdir}/%{pdir}-%{pnam}-%{version}.tar.gz
-BuildRequires:	perl >= 5.6
+BuildRequires:	perl >= 5.8.0
 BuildRequires:	rpm-perlprov >= 4.1-13
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
@@ -32,7 +36,8 @@ i czasu oraz Class::Date::Rel do dat wzglêdnych.
 %{__perl} Makefile.PL \
 	INSTALLDIRS=vendor 
 %{__make}
-%{__make} test
+
+%{!?_without_tests:%{__make} test}
 
 %install
 rm -rf $RPM_BUILD_ROOT
