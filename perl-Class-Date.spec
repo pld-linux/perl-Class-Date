@@ -2,6 +2,7 @@
 %define	pdir	Class
 %define	pnam	Date
 Summary:	Class for easy date and time manipulation
+Summary(pl):	Klasa Perla do ³atwej manipulacji dat± i czasem
 Name:		perl-%{pdir}-%{pnam}
 Version:	1.1.5
 Release:	1
@@ -14,8 +15,13 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
 This module is intended to provide a general-purpose date and datetime
-type for perl. You have a Class::Date class for absolute date and
+type for Perl. You have a Class::Date class for absolute date and
 datetime, and have a Class::Date::Rel class for relative dates.
+
+%description -l pl
+Ten modu³ ma za zadanie udostêpniæ dla Perla typy daty i czasu
+ogólnego przeznaczenia. Zawiera klasê Class::Date do bezwzglêdnych dat
+i czasu oraz Class::Date::Rel do dat wzglêdnych.
 
 %prep
 %setup -q -n %{pdir}-%{pnam}-%{version}
