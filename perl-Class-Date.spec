@@ -7,7 +7,7 @@
 %define	pnam	Date
 Summary:	Perl Class for easy date and time manipulation
 Summary(pl):	Klasa Perla do ³atwej manipulacji dat± i czasem
-Name:		perl-%{pdir}-%{pnam}
+Name:		perl-Class-Date
 Version:	1.1.7
 Release:	2
 # same as perl
