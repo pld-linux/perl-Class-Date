@@ -5,12 +5,12 @@ Summary:	Class for easy date and time manipulation
 Summary(pl):	Klasa Perla do ³atwej manipulacji dat± i czasem
 Name:		perl-%{pdir}-%{pnam}
 Version:	1.1.5
-Release:	2
+Release:	3
 License:	GPL/Artistic
 Group:		Development/Languages/Perl
 Source0:	http://www.cpan.org/modules/by-module/%{pdir}/%{pdir}-%{pnam}-%{version}.tar.gz
 BuildRequires:	perl >= 5.6
-BuildRequires:	rpm-perlprov >= 3.0.3-16
+BuildRequires:	rpm-perlprov >= 4.1-13
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %define		_noautoreqdep	'perl(UNIVERSAL)'
@@ -29,7 +29,8 @@ i czasu oraz Class::Date::Rel do dat wzglêdnych.
 %setup -q -n %{pdir}-%{pnam}-%{version}
 
 %build
-%{__perl} Makefile.PL
+%{__perl} Makefile.PL \
+	INSTALLDIRS=vendor 
 %{__make}
 %{__make} test
 
@@ -44,10 +45,10 @@ rm -rf $RPM_BUILD_ROOT
 %files
 %defattr(644,root,root,755)
 %doc Change*
-%{perl_sitearch}/%{pdir}/%{pnam}.pm
-%dir %{perl_sitearch}/%{pdir}/%{pnam}
-%{perl_sitearch}/%{pdir}/%{pnam}/*.pm
-#%dir %{perl_sitearch}/auto/%{pdir} # -- which package should be a Class/ owner?
-%dir %{perl_sitearch}/auto/%{pdir}/%{pnam}
-%{perl_sitearch}/auto/%{pdir}/%{pnam}/%{pnam}.*
+%{perl_vendorarch}/%{pdir}/%{pnam}.pm
+%dir %{perl_vendorarch}/%{pdir}/%{pnam}
+%{perl_vendorarch}/%{pdir}/%{pnam}/*.pm
+#%dir %{perl_vendorarch}/auto/%{pdir} # -- which package should be a Class/ owner?
+%dir %{perl_vendorarch}/auto/%{pdir}/%{pnam}
+%{perl_vendorarch}/auto/%{pdir}/%{pnam}/%{pnam}.*
 %{_mandir}/man3/*
