@@ -9,7 +9,7 @@ Summary:	Perl Class for easy date and time manipulation
 Summary(pl):	Klasa Perla do ³atwej manipulacji dat± i czasem
 Name:		perl-%{pdir}-%{pnam}
 Version:	1.1.7
-Release:	1
+Release:	2
 # same as perl
 License:	GPL v1+ or Artistic
 Group:		Development/Languages/Perl
