@@ -3,8 +3,8 @@
 %bcond_without	tests	# do not perform "make test"
 #
 %include	/usr/lib/rpm/macros.perl
-%define	pdir	Class
-%define	pnam	Date
+%define		pdir	Class
+%define		pnam	Date
 Summary:	Perl Class for easy date and time manipulation
 Summary(pl):	Klasa Perla do ³atwej manipulacji dat± i czasem
 Name:		perl-Class-Date
