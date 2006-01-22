@@ -8,13 +8,13 @@
 Summary:	Perl Class for easy date and time manipulation
 Summary(pl):	Klasa Perla do ³atwej manipulacji dat± i czasem
 Name:		perl-Class-Date
-Version:	1.1.7
-Release:	2
+Version:	1.1.8
+Release:	0.1
 # same as perl
 License:	GPL v1+ or Artistic
 Group:		Development/Languages/Perl
 Source0:	http://www.cpan.org/modules/by-module/%{pdir}/%{pdir}-%{pnam}-%{version}.tar.gz
-# Source0-md5:	393982de64d0b6a6fa51c6d331da1843
+# Source0-md5:	d14ae2f5e9fed7b752a1d4342488e8c4
 BuildRequires:	perl-devel >= 1:5.8.0
 BuildRequires:	rpm-perlprov >= 4.1-13
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
