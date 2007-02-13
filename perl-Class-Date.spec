@@ -6,7 +6,7 @@
 %define		pdir	Class
 %define		pnam	Date
 Summary:	Perl Class for easy date and time manipulation
-Summary(pl.UTF-8):   Klasa Perla do łatwej manipulacji datą i czasem
+Summary(pl.UTF-8):	Klasa Perla do łatwej manipulacji datą i czasem
 Name:		perl-Class-Date
 Version:	1.1.9
 Release:	1
