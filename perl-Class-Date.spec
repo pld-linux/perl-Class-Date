@@ -1,10 +1,10 @@
 #
 # Conditional build:
 %bcond_without	tests	# do not perform "make test"
-#
-%include	/usr/lib/rpm/macros.perl
+
 %define		pdir	Class
 %define		pnam	Date
+%include	/usr/lib/rpm/macros.perl
 Summary:	Perl Class for easy date and time manipulation
 Summary(pl.UTF-8):	Klasa Perla do łatwej manipulacji datą i czasem
 Name:		perl-Class-Date
@@ -15,6 +15,7 @@ License:	GPL v1+ or Artistic
 Group:		Development/Languages/Perl
 Source0:	http://www.cpan.org/modules/by-module/%{pdir}/%{pdir}-%{pnam}-%{version}.tar.gz
 # Source0-md5:	d9f305bf7cf5a1ca67354339e2fff5d5
+URL:		http://search.cpan.org/dist/Class-Date/
 BuildRequires:	perl-devel >= 1:5.8.0
 BuildRequires:	rpm-perlprov >= 4.1-13
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
