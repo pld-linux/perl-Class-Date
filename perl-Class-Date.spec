@@ -4,7 +4,6 @@
 
 %define		pdir	Class
 %define		pnam	Date
-%include	/usr/lib/rpm/macros.perl
 Summary:	Perl Class for easy date and time manipulation
 Summary(pl.UTF-8):	Klasa Perla do łatwej manipulacji datą i czasem
 Name:		perl-Class-Date
