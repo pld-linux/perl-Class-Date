@@ -8,7 +8,7 @@ Summary:	Perl Class for easy date and time manipulation
 Summary(pl.UTF-8):	Klasa Perla do łatwej manipulacji datą i czasem
 Name:		perl-Class-Date
 Version:	1.1.17
-Release:	1
+Release:	2
 # same as perl
 License:	GPL v1+ or Artistic
 Group:		Development/Languages/Perl
